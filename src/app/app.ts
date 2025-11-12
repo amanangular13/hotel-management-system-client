@@ -1,9 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
+import { Header } from "./layout/header/header";
+import { Sidebar } from "./layout/sidebar/sidebar";
+import { Footer } from "./layout/footer/footer";
+import { Main } from "./layout/main/main";
 
 @Component({
   selector: 'app-root',
-  imports: [ButtonModule],
+  imports: [Header, Sidebar, Footer, Main],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
