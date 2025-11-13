@@ -30,7 +30,6 @@
     "@angular/router": "^20.3.0",
     "@primeuix/themes": "^1.2.5",
     "basscss": "^8.0.2",
-    "jwt-decode": "^4.0.0",
     "primeicons": "^7.0.0",
     "primeng": "^20.3.0",
     "rxjs": "~7.8.0",

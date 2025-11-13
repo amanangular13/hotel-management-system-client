@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivateFn, Router, UrlTree } from '@angular/router';
+import { Router, UrlTree } from '@angular/router';
 
-import { getUserRole } from '../utils/jwtUtils';
+import { getUserRole } from '../utils/roleUtils';
 import { Role } from '../../shared/constants/app-enums';
 
 export const roleGuard = (expectedRoles: Role[]) => {

@@ -1,13 +1,13 @@
-import { jwtDecode } from 'jwt-decode';
+import { inject } from '@angular/core';
 import { Role } from '../../shared/constants/app-enums';
+import { AuthService } from '../services/auth-service';
 
 export function getUserRole(): Role | null {
-  const token = localStorage.getItem('token');
-  if (!token) return null;
+  const authService = inject(AuthService);
 
   try {
-    const decoded: any = jwtDecode(token);
-    switch (decoded.role) {
+    const role: string = authService.getRole();
+    switch (role) {
       case Role.ADMIN:
         return Role.ADMIN;
       case Role.HOTEL_MANAGER:
