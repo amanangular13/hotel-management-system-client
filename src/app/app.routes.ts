@@ -15,6 +15,9 @@ import { AddRooms } from './shared/components/hotel-manager/add-rooms/add-rooms'
 import { UpdateRooms } from './shared/components/hotel-manager/update-rooms/update-rooms';
 import { InitInventory } from './shared/components/hotel-manager/init-inventory/init-inventory';
 import { AdminDashboard } from './shared/components/admin/admin-dashboard/admin-dashboard';
+import { Unauthorized } from './shared/components/unauthorized/unauthorized';
+import { PageNotFound } from './shared/components/page-not-found/page-not-found';
+import { AboutUs } from './shared/components/about-us/about-us';
 
 export const routes: Routes = [
     
@@ -39,4 +42,9 @@ export const routes: Routes = [
 
   // admin's protected routes
   { path: 'admin-dashboard', component: AdminDashboard, canActivate: [roleGuard([Role.ADMIN])] },
+
+  // other routes
+  { path: 'unauthorized', component: Unauthorized},
+  { path: 'about-us', component: AboutUs},
+  { path: '**', component: PageNotFound}
 ];

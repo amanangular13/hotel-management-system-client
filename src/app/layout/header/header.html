@@ -1,1 +1,42 @@
-<p>header works!</p>
+<p-toolbar [style]="{ 'border-radius': '3rem', padding: '0rem 1rem 0rem 1rem' }">
+  <ng-template #start>
+    <img
+      src="https://png.pngtree.com/png-vector/20250909/ourlarge/pngtree-beach-hotel-logo-design-vector-file-png-image_17389889.webp"
+      style="width: 4rem; margin-right: 1rem; border-radius: 3rem"
+    />
+    <h1 class="">Stay Finder</h1>
+  </ng-template>
+
+  <ng-template #center>
+    <div class="flex items-center gap-2">
+      <a routerLink="/">
+        <p-button label="Home" text plain />
+      </a>
+      <a routerLink="/hotels">
+        <p-button label="Explore Hotels" text plain />
+      </a>
+      <a routerLink="/about-us">
+        <p-button label="About" text plain />
+      </a>
+    </div>
+  </ng-template>
+
+  <ng-template #end>
+    @if (loggedIn()) {
+    <div class="flex items-center gap-2">
+      <a routerLink="/profile" pButton>
+        <p-avatar [label]="initials" class="mr-2" size="large" shape="circle" />
+      </a>
+    </div>
+    } @else {
+    <div class="flex items-center gap-2">
+      <a routerLink="/login">
+        <p-button label="Sign in" text plain />
+      </a>
+      <a routerLink="/register">
+        <p-button label="Create account" severity="secondary" [rounded]="true" />
+      </a>
+    </div>
+    }
+  </ng-template>
+</p-toolbar>

@@ -1,16 +1,25 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private role: string = "";
+  private role = signal("");
+  private loggedIn = signal(false);
 
   setRole(role: string) {
-    this.role = role;
+    this.role.set(role);
   }
 
   getRole(): string {
-    return this.role;
+    return this.role();
+  }
+
+  setLoggedIn(status: boolean) {
+    this.loggedIn.set(status);
+  }
+
+  getLoggedIn() {
+    return this.loggedIn();
   }
 }
