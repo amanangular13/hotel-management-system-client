@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="user-login">
+  <div class="ml4 mt3 mr4 mb3">
+    <h1>Login</h1>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+    <div class="clearfix m2">
+      <label class="col col-2" for="email">Email : </label>
+      <input class="col col-2" id="email" pInputText formControlName="email" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2" for="password">Password : </label>
+      <p-password
+        class="col col-2"
+        id="password"
+        formControlName="password"
+        toggleMask
+        feedback="false"
+      ></p-password>
+    </div>
+
+    <div class="mt3 ml2 mb3">
+      <p-button
+        type="submit"
+        severity="primary"
+        label="Login"
+        [disabled]="loginForm.invalid"
+      ></p-button>
+    </div>
+  </form>
+  @if (loginForm.get('email')?.touched && loginForm.get('email')?.invalid) {
+  <div class="p-error">Enter a valid email.</div>
+  } @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
+  <div class="p-error">Password is required.</div>
+  }
+</div>
