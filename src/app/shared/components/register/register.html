@@ -1,4 +1,4 @@
-<div class="user-registration">
+<div class="user-registration" style="margin-left: 500px; margin-top: 100px;">
   <div class="ml4 mt3 mr4 mb3">
     <h1>Create new account</h1>
   </div>
@@ -55,13 +55,13 @@
     </div>
   </form>
   @if (registrationForm.get('name')?.touched && registrationForm.get('name')?.invalid) {
-  <div class="p-error">Name is required.</div>
+  <div class="p-error">*Name is required.</div>
   } @if (registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid) {
-  <div class="p-error">Enter a valid email.</div>
+  <div class="p-error">*Enter a valid email.</div>
   } @if (registrationForm.errors?.["mismatch"] && registrationForm.get('confirmPassword')?.touched)
   {
-  <div class="p-error">Passwords do not match.</div>
+  <div class="p-error">*Passwords do not match.</div>
   } @if (registrationForm.get('phone')?.touched && registrationForm.get('phone')?.invalid) {
-  <div class="p-error">Enter a valid 10-digit phone number.</div>
+  <div class="p-error">*Enter a valid 10-digit phone number.</div>
   }
 </div>
