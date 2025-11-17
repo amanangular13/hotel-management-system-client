@@ -1,1 +1,40 @@
-<p>add-rooms works!</p>
+<div class="user-registration" style="margin-left: 500px; margin-top: 100px">
+  <div class="ml4 mt3 mr4 mb3">
+    <h1 class="ml2">Add room</h1>
+  </div>
+  <form [formGroup]="roomForm" (ngSubmit)="submitForm()">
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="roomNumber">roomNumber : </label>
+      <input class="col col-2" id="roomNumber" pInputText formControlName="roomNumber" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="type"> Type : </label>
+      <input class="col col-2" id="type" pInputText formControlName="type" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="capacity">Capacity : </label>
+      <input class="col col-2" id="capacity" pInputText formControlName="capacity" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="status">Status : </label>
+      <input class="col col-2" id="status" pInputText formControlName="status" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="basePrice">basePrice : </label>
+      <input class="col col-2" id="basePrice" pInputText formControlName="basePrice" />
+    </div>
+
+    <div class="mt3 ml2 mb3">
+      <p-button
+        type="submit"
+        severity="primary"
+        label="Add"
+        [disabled]="roomForm.invalid"
+      ></p-button>
+    </div>
+  </form>
+</div>

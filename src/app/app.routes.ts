@@ -13,7 +13,6 @@ import { AddHotel } from './shared/components/hotel-manager/add-hotel/add-hotel'
 import { UpdateHotel } from './shared/components/hotel-manager/update-hotel/update-hotel';
 import { AddRooms } from './shared/components/hotel-manager/add-rooms/add-rooms';
 import { UpdateRooms } from './shared/components/hotel-manager/update-rooms/update-rooms';
-import { InitInventory } from './shared/components/hotel-manager/init-inventory/init-inventory';
 import { AdminDashboard } from './shared/components/admin/admin-dashboard/admin-dashboard';
 import { Unauthorized } from './shared/components/unauthorized/unauthorized';
 import { PageNotFound } from './shared/components/page-not-found/page-not-found';
@@ -37,8 +36,7 @@ export const routes: Routes = [
   { path: 'add-hotel', component: AddHotel, canActivate: [roleGuard([Role.HOTEL_MANAGER])] },
   { path: 'update-hotel', component: UpdateHotel, canActivate: [roleGuard([Role.HOTEL_MANAGER])] },
   { path: 'add-room', component: AddRooms, canActivate: [roleGuard([Role.HOTEL_MANAGER])] },
-  { path: 'update-hotel', component: UpdateRooms, canActivate: [roleGuard([Role.HOTEL_MANAGER])] },
-  { path: 'init-inventory', component: InitInventory, canActivate: [roleGuard([Role.HOTEL_MANAGER])] },
+  { path: 'update-room', component: UpdateRooms, canActivate: [roleGuard([Role.HOTEL_MANAGER])] },
 
   // admin's protected routes
   { path: 'admin-dashboard', component: AdminDashboard, canActivate: [roleGuard([Role.ADMIN])] },

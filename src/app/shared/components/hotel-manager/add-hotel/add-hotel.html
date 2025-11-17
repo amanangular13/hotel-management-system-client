@@ -1,1 +1,60 @@
-<p>add-hotel works!</p>
+<div class="user-registration" style="margin-left: 500px; margin-top: 100px">
+  <div class="ml4 mt3 mr4 mb3">
+    <h1 class="ml2">Create new hotel</h1>
+  </div>
+  <form [formGroup]="hotelForm" (ngSubmit)="submitForm()">
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="name">Hotel name : </label>
+      <input class="col col-2" id="name" pInputText formControlName="name" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="description"> Description : </label>
+      <input class="col col-2" id="description" pInputText formControlName="description" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="address">Address : </label>
+      <input class="col col-2" id="address" pInputText formControlName="address" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="city">City : </label>
+      <input class="col col-2" id="city" pInputText formControlName="city" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="state">State : </label>
+      <input class="col col-2" id="state" pInputText formControlName="state" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="country">Country : </label>
+      <input class="col col-2" id="country" pInputText formControlName="country" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="pinCode">Pincode : </label>
+      <input class="col col-2" id="pinCode" pInputText formControlName="pinCode" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="contactEmail">Contact Email : </label>
+      <input class="col col-2" id="contactEmail" pInputText formControlName="contactEmail" />
+    </div>
+
+    <div class="clearfix m2">
+      <label class="col col-2 pt1" for="contactNumber">Contact Number : </label>
+      <input class="col col-2" id="contactNumber" pInputText formControlName="contactNumber" />
+    </div>
+
+    <div class="mt3 ml2 mb3">
+      <p-button
+        type="submit"
+        severity="primary"
+        label="Create"
+        [disabled]="hotelForm.invalid"
+      ></p-button>
+    </div>
+  </form>
+</div>

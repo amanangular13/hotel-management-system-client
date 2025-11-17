@@ -4,7 +4,7 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  private role = signal("");
+  private role = signal("HOTEL_MANAGER");
   private loggedIn = signal(false);
 
   setRole(role: string) {

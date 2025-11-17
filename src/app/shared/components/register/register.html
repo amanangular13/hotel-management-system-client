@@ -4,17 +4,17 @@
   </div>
   <form [formGroup]="registrationForm" (ngSubmit)="submitForm()">
     <div class="clearfix m2">
-      <label class="col col-2" for="name">Name : </label>
+      <label class="col col-2 pt1" for="name">Name : </label>
       <input class="col col-2" id="name" pInputText formControlName="name" />
     </div>
 
     <div class="clearfix m2">
-      <label class="col col-2" for="email">Email : </label>
+      <label class="col col-2 pt1" for="email">Email : </label>
       <input class="col col-2" id="email" pInputText formControlName="email" />
     </div>
 
     <div class="clearfix m2">
-      <label class="col col-2" for="password">Password : </label>
+      <label class="col col-2 pt1" for="password">Password : </label>
       <p-password
         class="col col-2"
         id="password"
@@ -25,7 +25,7 @@
     </div>
 
     <div class="clearfix m2">
-      <label class="col col-2" for="confirmPassword">Confirm Password : </label>
+      <label class="col col-2 pt1" for="confirmPassword">Confirm Password : </label>
       <p-password
         class="col col-2"
         id="confirmPassword"
@@ -36,13 +36,13 @@
     </div>
 
     <div class="clearfix m2">
-      <label class="col col-2" for="phone">Phone : </label>
+      <label class="col col-2 pt1" for="phone">Phone : </label>
       <input class="col col-2" id="phone" pInputText formControlName="phone" />
     </div>
 
     <div class="ml2">
       <p-checkbox formControlName="requestedForHotelManager" binary="true" />
-      <span class="ml2">Please check this, If you are registring for Hotel Manager.</span>
+      <span class="ml2">Please check this, If you are registering for Hotel Manager.</span>
     </div>
 
     <div class="mt3 ml2 mb3">
