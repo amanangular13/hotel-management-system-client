@@ -1,0 +1,42 @@
+::ng-deep {
+  .hotel-panel {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 2rem;
+  }
+
+  .hotel-image {
+    padding: 20px;
+    img {
+      width: 300px;
+      border-radius: 2rem;
+    }
+  }
+
+  .hotel-details {
+    width: 600px;
+  }
+
+  .msg {
+    border: 1px solid grey;
+    color: grey;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+  .hotel-price {
+    width: 300px;
+    padding-left: 150px;
+    padding-top: 165px;
+
+    * {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+  }
+}

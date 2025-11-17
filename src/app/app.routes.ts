@@ -28,7 +28,7 @@ export const routes: Routes = [
   { path: 'hotels/:id', component: Hotel },
 
   // user's protected routes
-  { path: 'profile', component: Profile, canActivate: [roleGuard([Role.USER])] },
+  { path: 'profile', component: Profile, canActivate: [roleGuard([Role.USER, Role.HOTEL_MANAGER])] },
   { path: 'booking', component: Booking, canActivate: [roleGuard([Role.USER])] },
   { path: 'payment', component: Payment, canActivate: [roleGuard([Role.USER])] },
   
